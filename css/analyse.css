@@ -1,0 +1,37 @@
+/* ============================================================
+   KLAAR OM TE GROEIEN / PRAKTIJK-ANALYSE
+   ============================================================ */
+.analyse-section {
+    background: var(--blauw);
+    text-align: center;
+    border-top: 2px solid var(--goud);
+    border-bottom: 2px solid var(--goud);
+    margin-top: var(--margin);
+}
+
+.analyse-content {
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.analyse-content h2,
+.analyse-content .label {
+    max-width: 100%;
+}
+
+.analyse-content h2 {
+    color: var(--wit);
+}
+
+.analyse-content p {
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.analyse-content hr,
+.analyse-content .btn {
+    margin-left: auto;
+    margin-right: auto;
+}

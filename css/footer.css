@@ -1,0 +1,150 @@
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer {
+    background: #0f2538;
+    color: rgba(255,255,255,0.75);
+    border-top: 2px solid var(--goud);
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: var(--gap);
+    padding: 42px 32px;
+}
+
+.footer-big {
+    display: none;
+    font-family: var(--font-heading);
+    font-weight: var(--font-weight-title);
+    font-size: 1.2rem;
+    color: var(--wit);
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.footer-tagline {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.55);
+    margin-top: 0.2rem;
+}
+
+.footer-contact h4,
+.footer-social h4 {
+    color: var(--goud);
+    font-size: 0.78rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-family: var(--font-heading);
+}
+
+.footer-contact p {
+    color: rgba(255,255,255,0.7);
+    font-size: 0.9rem;
+    margin-bottom: 0.35rem;
+}
+
+.footer-contact a {
+    color: rgba(255,255,255,0.7);
+    transition: color var(--transition);
+}
+
+.footer-contact a:hover {
+    color: var(--goud);
+}
+
+.social-links {
+    display: flex;
+    gap: 16px;
+}
+
+.social-icon {
+    width: 28px;
+    height: 28px;
+    fill: rgba(255,255,255,0.65);
+    transition: fill var(--transition);
+}
+
+.social-links a:hover .social-icon {
+    fill: var(--goud);
+}
+
+.hover-gold {
+    transition: fill var(--transition);
+}
+
+.hover-gold:hover {
+    color: var(--goud);
+}
+
+.footer-hr {
+    background-color: var(--wit);
+    color: var(--wit);
+    width: 70%;
+    margin: 20px 0;
+    height: 1px;
+    border: 0;
+    opacity: 0.3;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-bottom .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.4);
+}
+
+.footer-copyright {
+    color: rgba(255,255,255,0.4);
+}
+
+@media (max-width: 1024px) {
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+        padding: 42px 24px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+        text-align: center;
+    }
+
+    .footer-hr {
+        margin: 20px auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        text-align: center;
+    }
+
+    .footer-contact,
+    .footer-social {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .footer-bottom .container {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+}

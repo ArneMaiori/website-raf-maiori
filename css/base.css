@@ -1,0 +1,344 @@
+﻿/* ============================================================
+   TEKSTTYPE & STIJL
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lato:wght@400;700&family=Raleway:ital,wght@1,300&display=swap');
+
+/* ============================================================
+   KLEURENPALET & VARIABELEN
+   ============================================================ */
+:root {
+    --font-heading: 'Poppins', sans-serif;
+    --font-body: 'Lato', sans-serif;
+    --font-quote: 'Raleway', sans-serif;
+    --font-weight-title: 600;
+    --font-weight-subtitle: 500;
+    --font-weight-cta: 700;
+
+    --blauw: #163853;
+    --goud: #E1B13B;
+    --grijs-licht: #EDEDED;
+    --grijs-donker: #333333;
+    --wit: #FFFFFF;
+
+    --padding: 50px;
+    --margin: 40px;
+    --container-max: 1160px;
+    --gap: 40px;
+    --radius: 4px;
+    --transition: 0.35s ease;
+}
+
+@media (max-width: 900px) {
+    :root {
+        --padding: 36px;
+        --gap: 28px;
+    }
+}
+
+@media (max-width: 600px) {
+    :root {
+        --padding: 28px;
+        --gap: 20px;
+    }
+}
+
+/* ============================================================
+   HULPKLASSEN & CONTAINER
+   ============================================================ */
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+@media (max-width: 900px) {
+    .container {
+        padding-left: 30px !important;
+        padding-right: 30px !important;
+    }
+}
+
+/* ============================================================
+   RESET & BASIS
+   ============================================================ */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--grijs-donker);
+    background: var(--wit);
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+section[id] {
+    scroll-margin-top: 68px;
+}
+
+/* ============================================================
+   HEADERS & TEKSTEN
+   ============================================================ */
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--font-heading);
+    line-height: 1.2;
+    color: var(--blauw);
+}
+
+h1 {
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
+    font-weight: var(--font-weight-title);
+}
+
+h2 {
+    font-size: clamp(1.4rem, 3.5vw, 2.6rem);
+    font-weight: var(--font-weight-title);
+    margin-bottom: 1.25rem;
+}
+
+h3 {
+    font-size: 1.35rem;
+    font-weight: var(--font-weight-title);
+    margin-bottom: 0.5rem;
+}
+
+h4 {
+    font-size: 1.15rem;
+    font-weight: var(--font-weight-title);
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+    font-size: clamp(0.85rem, 2vw, 1rem);
+    color: var(--grijs-donker);
+}
+
+p:last-child {
+    margin-bottom: 0;
+}
+
+.goud {
+    color: var(--goud);
+}
+
+blockquote {
+    font-family: var(--font-quote);
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.15rem;
+    color: var(--blauw);
+    border-left: 3px solid var(--goud);
+    padding-left: 1.25rem;
+    margin-top: 1.75rem;
+    line-height: 1.6;
+}
+
+section {
+    padding: var(--padding) 0;
+}
+
+.label {
+    font-family: var(--font-heading);
+    font-size: clamp(0.9rem, 1.5vw, 1.4rem) !important;
+    font-weight: var(--font-weight-cta);
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--goud);
+    display: block;
+    margin-bottom: 0.75rem;
+}
+
+.label.light {
+    color: var(--goud);
+}
+
+.text-center {
+    text-align: center;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40px;
+}
+
+.intro-text:not(.small-hr-line) {
+    font-size: 1.1rem;
+    color: var(--grijs-donker);
+    margin-top: -0.5rem;
+}
+
+/* ============================================================
+   SPACING UTILITY
+   ============================================================ */
+.pb-xs {
+    padding-bottom: 8px !important;
+}
+
+.pb-sm {
+    padding-bottom: 15px !important;
+}
+
+.pb-md {
+    padding-bottom: 20px !important;
+}
+
+.pb-lg {
+    padding-bottom: 30px !important;
+}
+
+.pt-sm {
+    padding-top: 15px !important;
+}
+
+.pt-md {
+    padding-top: 30px !important;
+}
+
+.pt-lg {
+    padding-top: 40px !important;
+}
+
+.mb-xs {
+    margin-bottom: 8px !important;
+}
+
+.mb-sm {
+    margin-bottom: 15px !important;
+}
+
+.mb-md {
+    margin-bottom: 24px !important;
+}
+
+.mb-lg {
+    margin-bottom: 40px !important;
+}
+
+/* ============================================================
+   HORIZONTALE LIJNEN
+   ============================================================ */
+hr {
+    border: 0;
+    height: 1px;
+    background: var(--grijs-licht);
+    margin: 24px 0;
+}
+
+.small-hr-line {
+    background-color: var(--goud);
+    color: var(--goud);
+    width: 30%;
+    margin: 30px auto;
+    height: 2px;
+    border: 0;
+}
+
+/* ============================================================
+   KNOPPEN
+   ============================================================ */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 13px 30px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    border: none;
+    box-shadow: none;
+}
+
+.btn-primary {
+    background: var(--blauw);
+    color: var(--wit);
+}
+
+.btn-primary:hover {
+    background: #1e4d6e;
+    transform: translateY(-2px);
+}
+
+.btn-gold,
+.btn-nav {
+    background: var(--goud);
+    color: var(--blauw);
+    padding: 9px 24px;
+    margin-top: 0;
+    box-shadow: none;
+}
+
+.btn-big {
+    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+    padding: 15px 30px !important;
+    font-size: 1.2rem;
+}
+
+.btn-gold:hover,
+.btn-nav:hover {
+    background: #d4a32e;
+    color: var(--blauw);
+    transform: translateY(-2px);
+    box-shadow: none;
+}
+
+@media (max-width: 900px) {
+    .btn-big {
+        font-size: 0.95rem !important;
+        padding: 12px 20px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    .btn-big {
+        font-size: 0.90rem !important;
+        padding: 10px 18px !important;
+    }
+}
+
+/* ============================================================
+   SCROLL REVEAL ANIMATIES
+   ============================================================ */
+.reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
