@@ -58,7 +58,7 @@
 }
 
 .over-logo {
-    max-height: 48px;
+    max-height: 62px;
     width: auto;
     margin-bottom: 1.25rem;
 }
@@ -132,7 +132,8 @@
 
 
     .over-logo {
-        display: none;
+        max-height: 54px;
+        height: auto;
     }
 }
 

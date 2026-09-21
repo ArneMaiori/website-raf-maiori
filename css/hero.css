@@ -37,7 +37,7 @@
 .hero-label {
     color: var(--goud);
     margin-bottom: 10px;
-    font-size: clamp(0.8rem, 2vw, 1.1rem);
+    font-size: clamp(1rem, 2vw, 1.3rem);
 }
 
 .hero-content h1 {
@@ -45,11 +45,17 @@
     margin-bottom: 0.2rem;
 }
 
+.hero-title {
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
+
+}
+
 .hero-sub {
     color: rgba(255, 255, 255, 0.9);
-    font-size: clamp(0.9rem, 3vw, 1.2rem);
+    font-size: clamp(1.3rem, 4vw, 1.8rem);
     margin-bottom: 0;
     max-width: 540px;
+    font-weight: var(--font-weight-title);
 }
 
 .hero-quote-section {
@@ -70,11 +76,19 @@
     padding: 0 10px;
 }
 
+@media (max-width: 1100px) {
+    .hero-content {
+        padding: 0 30px;
+        margin-left: 5vw;
+        max-width: 50%;
+    }
+}
+
 @media (max-width: 900px) {
     .hero-content {
         padding: 0 24px;
-        margin-left: 0;
-        max-width: 100%;
+        margin-left: 4vw;
+        max-width: 50%;
     }
 }
 
@@ -85,5 +99,11 @@
 
     .hero-quote-section {
         padding: 36px 18px;
+    }
+
+    .hero-content {
+        padding: 0 12px;
+        margin-left: 1.5vw;
+        max-width: 50%;
     }
 }
