@@ -60,7 +60,6 @@ if (popupClose && popupOverlay) {
 }
 
 
-// 24 okt workshop button auto aanpas
 const navActionBtn = document.getElementById('navActionBtn');
 const tempAnalyseNav = document.getElementById('tempAnalyseNav');
 
@@ -76,5 +75,25 @@ if (navActionBtn || tempAnalyseNav) {
             tempAnalyseNav.parentElement.style.display = 'none';
         }
     }
+}
+
+const navToggle = document.getElementById('navToggle');
+const navMenu = document.getElementById('navMenu');
+
+if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+        navToggle.classList.toggle('active');
+        navMenu.classList.toggle('open');
+        document.body.style.overflow = navMenu.classList.contains('open') ? 'hidden' : '';
+    });
+
+    const menuItems = navMenu.querySelectorAll('a');
+    menuItems.forEach(item => {
+        item.addEventListener('click', () => {
+            navToggle.classList.remove('active');
+            navMenu.classList.remove('open');
+            document.body.style.overflow = '';
+        });
+    });
 }
 
