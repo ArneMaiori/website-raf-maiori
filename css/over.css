@@ -67,6 +67,7 @@
     .over-section {
         margin: 0 !important;
         padding: 0 !important;
+        background: var(--blauw);
     }
 
     .over-duo-container {
@@ -76,14 +77,21 @@
         position: relative;
         width: 100%;
         padding: 0;
+        background: var(--blauw);
+        gap: 160px;
     }
 
     .over-side-photo {
         width: 100%;
-        height: 400px;
+        height: 380px;
         margin: 0 !important;
         border-radius: 0 !important;
         flex: none;
+        position: relative;
+    }
+
+    .over-side-photo.over-photo-left {
+        border-bottom: 2px solid var(--goud);
     }
 
     .over-side-photo.over-photo-left img {
@@ -91,20 +99,9 @@
         object-position: center 40%;
     }
 
-    .over-side-photo.over-photo-left::after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: 2px;
-        background-color: var(--goud);
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: 2;
-    }
-
     .over-side-photo.over-photo-right {
         display: block;
+        border-top: 2px solid var(--goud);
     }
 
     .over-side-photo.over-photo-right img {
@@ -120,16 +117,15 @@
         width: calc(100% - 36px);
         max-width: 540px;
         margin: 0;
-        padding: 24px 28px;
+        padding: 28px 28px;
         z-index: 10;
         flex: none;
-        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
     }
 
     .over-textbox-centered.reveal.visible {
         transform: translate(-50%, -50%);
     }
-
 
     .over-logo {
         max-height: 54px;
@@ -138,13 +134,17 @@
 }
 
 @media (max-width: 600px) {
+    .over-duo-container {
+        gap: 220px;
+    }
+
     .over-side-photo {
-        height: 300px;
+        height: 280px;
     }
 
     .over-textbox-centered {
         width: calc(100% - 24px);
-        padding: 18px 16px;
+        padding: 20px 18px;
     }
 
     .over-textbox-centered h2 {

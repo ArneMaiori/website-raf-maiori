@@ -16,6 +16,13 @@
     transition: opacity 0.4s ease, visibility 0.4s ease;
 }
 
+.popup-overlay.is-closed {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
 .popup-container {
     position: relative;
     background: var(--wit);

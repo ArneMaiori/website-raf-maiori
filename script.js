@@ -48,13 +48,14 @@ const popupOverlay = document.getElementById('popupOverlay');
 const popupClose = document.getElementById('popupClose');
 
 if (popupClose && popupOverlay) {
-    popupClose.addEventListener('click', () => {
+    const closePopup = () => {
+        popupOverlay.classList.add('is-closed');
         popupOverlay.style.display = 'none';
-    });
-
+    };
+    popupClose.addEventListener('click', closePopup);
     popupOverlay.addEventListener('click', (e) => {
         if (e.target === popupOverlay) {
-            popupOverlay.style.display = 'none';
+            closePopup();
         }
     });
 }

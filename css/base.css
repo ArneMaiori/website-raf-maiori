@@ -1,4 +1,4 @@
-﻿/* ============================================================
+/* ============================================================
    TEKSTTYPE & STIJL
    ============================================================ */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Lato:wght@400;700&family=Raleway:ital,wght@1,300&display=swap');
@@ -73,6 +73,8 @@
 html {
     scroll-behavior: smooth;
     font-size: 16px;
+    background-color: #0f2538;
+    height: 100%;
 }
 
 body {
@@ -81,6 +83,7 @@ body {
     background: var(--wit);
     line-height: 1.75;
     -webkit-font-smoothing: antialiased;
+    min-height: 100%;
 }
 
 img {
