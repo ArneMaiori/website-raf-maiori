@@ -31,16 +31,24 @@
     background: var(--goud);
 }
 
+.herken-content-grid {
+    display: block;
+}
+
+.herken-bottom-text {
+    margin-top: 1rem;
+}
+
 .herken-inline-photo {
     display: none;
-    margin: 1.5rem 4rem;
+    margin: 1.5rem 0;
     border-radius: var(--radius);
     overflow: hidden;
 }
 
 .herken-inline-photo img {
     width: 100%;
-    max-height: 280px;
+    height: 100%;
     object-fit: cover;
 }
 
@@ -70,8 +78,42 @@
         grid-template-columns: 1fr;
     }
 
+    .herken-content-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "list photo"
+            "text text";
+        gap: 1.25rem 30px;
+        align-items: center;
+        margin: 1.25rem 0;
+    }
+
+    .herken-list {
+        grid-area: list;
+        margin: 0;
+    }
+
     .herken-inline-photo {
+        grid-area: photo;
         display: block;
+        width: 100%;
+        max-width: 220px;
+        justify-self: center;
+        margin: 0 auto;
+    }
+
+    .herken-inline-photo img {
+        width: 100%;
+        height: auto;
+        max-height: 330px;
+        object-fit: cover;
+        border-radius: var(--radius);
+    }
+
+    .herken-bottom-text {
+        grid-area: text;
+        margin: 0;
     }
 
     .herken-foto-groot {
@@ -79,8 +121,53 @@
     }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 600px) {
+    .herken-content-grid {
+        gap: 1.25rem 16px;
+    }
+
     .herken-inline-photo {
-        max-height: 180px;
+        width: 160px;
+    }
+
+    .herken-inline-photo img {
+        max-height: 280px;
+    }
+}
+
+@media (max-width: 450px) {
+    .herken-content-grid {
+        grid-template-columns: 1fr auto;
+        grid-template-areas:
+            "list list"
+            "text photo";
+        gap: 1.25rem 14px;
+        align-items: center;
+        margin: 1.25rem 0;
+    }
+
+    .herken-list {
+        grid-area: list;
+        margin: 0;
+    }
+
+    .herken-bottom-text {
+        grid-area: text;
+        margin: 0;
+        font-size: 0.9rem;
+        line-height: 1.5;
+    }
+
+    .herken-inline-photo {
+        grid-area: photo;
+        width: 110px;
+        max-width: 120px;
+        justify-self: auto;
+        margin: 0;
+    }
+
+    .herken-inline-photo img {
+        max-height: 170px;
+        border-radius: var(--radius);
     }
 }
